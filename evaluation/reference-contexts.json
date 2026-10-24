@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "purpose": "Contextos de referência para avaliação controlada; não usados pela recuperação da aplicação.",
+  "book": {
+    "title": "Ordem Paranormal RPG",
+    "edition": "1.1",
+    "sha256": "236b90b7232600e00487c5f14a04e7230ea3ecb46086e6b9a93b42dfbad856fd"
+  },
+  "extraction": {
+    "start": "inclusivo; null significa início da página",
+    "end": "exclusivo; null significa fim da página",
+    "matching": "texto canônico literal; delimitadores devem ser únicos; aplicar strip() somente após recortar",
+    "integrity": "expected_chars e sha256 referem-se ao texto recortado após strip(), codificado em UTF-8",
+    "private_text": "Este arquivo contém somente limites e metadados. O texto montado deve permanecer em data/evaluations/, ignorado pelo Git."
+  },
+  "cases": {
+    "calibration_ritual_power": [
+      {
+        "id": "ritual_circles",
+        "source_id": "ritual_circles",
+        "pdf_page": 125,
+        "printed_page": "117",
+        "start": "Círculos\n",
+        "end": "\nElementos\n",
+        "expected_chars": 452,
+        "sha256": "9a49679ea4eae2de41bf3742c1bb15e38ed8b659a35d8efc7601efdc58751846"
+      },
+      {
+        "id": "ritual_costs",
+        "source_id": "ritual_costs",
+        "pdf_page": 127,
+        "printed_page": "119",
+        "start": "TABELA 5.2:",
+        "end": "APRENDENDO ",
+        "expected_chars": 77,
+        "sha256": "12c24d2f3e183601475205758bbccc8bff307c288c78a8ea46da800ea93b1eff"
+      },
+      {
+        "id": "deflagracao",
+        "source_id": "deflagracao",
+        "pdf_page": 137,
+        "printed_page": "129",
+        "start": "Deflagração de Energia\n",
+        "end": "Desacelerar Impacto\n",
+        "expected_chars": 648,
+        "sha256": "3edb15ec32f0aacacbb902d951c378f219dc4b13508ab994e9c9f61d5aebbba3"
+      },
+      {
+        "id": "fim_start",
+        "source_id": "fim_start",
+        "pdf_page": 140,
+        "printed_page": "132",
+        "start": "Fim Inevitável\n",
+        "end": null,
+        "expected_chars": 612,
+        "sha256": "2f8024f1ed2a7adde274c6062f6bfef5ac6ab7eb033f6c95ab08ac8b7eb86256"
+      },
+      {
+        "id": "fim_continuation",
+        "source_id": "fim_continuation",
+        "pdf_page": 141,
+        "printed_page": "133",
+        "start": "iniciem seu turno tocando o vácuo temporal sofrem",
+        "end": "Flagelo de Sangue\n",
+        "expected_chars": 350,
+        "sha256": "126189c8ddda7343ca1f4c883be8949cf8aee63c773212568638b39e35fb69a0"
+      },
+      {
+        "id": "inexistir",
+        "source_id": "inexistir",
+        "pdf_page": 142,
+        "printed_page": "134",
+        "start": "Inexistir\n",
+        "end": "Invadir Mente\n",
+        "expected_chars": 1101,
+        "sha256": "aac237746164400eca7c6ce272dfb7670372039f5bf52053beb5503d798637c8"
+      }
+    ],
+    "new_armor_for_rituals": [
+      {
+        "id": "armor_characteristics",
+        "source_id": "armor",
+        "pdf_page": 70,
+        "printed_page": "62",
+        "start": "CARACTERÍSTICAS \nDAS PROTEÇÕES",
+        "end": "\nPenalidade por Não Proficiência.",
+        "expected_chars": 241,
+        "sha256": "bd6645bf5e49af7116cad7b3e1451189342925ec776d6a2649bd530d089f32c6"
+      },
+      {
+        "id": "armor_descriptions",
+        "source_id": "armor",
+        "pdf_page": 70,
+        "printed_page": "62",
+        "start": "DESCRIÇÃO\n",
+        "end": "\nEscudo.",
+        "expected_chars": 508,
+        "sha256": "c4f18f510133f4d276ef0ec0c80f934d3fcb18421e0310f640bf6fc3f37a0be0"
+      },
+      {
+        "id": "armor_table",
+        "source_id": "armor",
+        "pdf_page": 70,
+        "printed_page": "62",
+        "start": "TABELA 3.6: PROTEÇÕES",
+        "end": "\nEscudo\n",
+        "expected_chars": 83,
+        "sha256": "e90a188ae31218b18c1c73c2d8c9aaa7a8d2fabc8dfb44cc237f2e6aa68885a5"
+      },
+      {
+        "id": "casting",
+        "source_id": "casting",
+        "pdf_page": 127,
+        "printed_page": "119",
+        "start": "Gestos e Componentes.",
+        "end": "\nExecução\n",
+        "expected_chars": 1340,
+        "sha256": "4dc9db1a584de0aa1b2765cbe4efb50459fbb9eec4bd5e02ac6008ca561aa7b0"
+      }
+    ],
+    "new_rest_recovery": [
+      {
+        "id": "sleep",
+        "source_id": "sleep",
+        "pdf_page": 101,
+        "printed_page": "93",
+        "start": "\nDormir\n",
+        "end": "\nExercitar-se\n",
+        "expected_chars": 1204,
+        "sha256": "614b5c7eeb456f2e3934eff321e43dd7062bafc8d6b142e9b2e86aa6d366e37e"
+      },
+      {
+        "id": "rounding",
+        "source_id": "rounding",
+        "pdf_page": 320,
+        "printed_page": "312",
+        "start": "Arredondamentos.",
+        "end": "\nOrdem.",
+        "expected_chars": 260,
+        "sha256": "16b2e9a3e2e435b7bfeb17d9e34158e68408886d2700a8bb67073a656abebfdf"
+      }
+    ]
+  },
+  "completeness_notes": {
+    "calibration_ritual_power": "Recorte de referência para comparar três candidatos verificados, sem alegar ranking universal. Inclui classificação, tabela de custo básico e descrições completas dos três candidatos, com aprimoramentos. Fim Inevitável exige os dois fragmentos consecutivos. Exclui catálogo e outros rituais para não confundir descoberta com evidência dos efeitos. Não sustenta afirmar a melhor opção dentre todos os rituais nem requisitos pessoais de acesso não presentes nesses recortes.",
+    "new_armor_for_rituals": "Os três fragmentos da página 70 preservam significado das colunas, descrições das proteções e ambas as linhas da tabela. Excluem escudos e modificações. O fragmento de conjuração inclui gestos, concentração, consequência da falha e condições ruim/terrível. A proficiência informada na pergunta é uma premissa; não é inferida das fontes.",
+    "new_rest_recovery": "A seção Dormir inclui o exemplo explícito de NEX 35%, as quatro condições, restrições de disponibilidade e uma vez por interlúdio. A regra de arredondamento vem de seção própria. Exclui comida e relaxar, conforme as premissas da pergunta. Os resultados numéricos devem ser derivados pelo respondente; o manifesto não fornece o gabarito ao modelo."
+  },
+  "sizes": {
+    "calibration_ritual_power": {
+      "characters": 3240,
+      "utf8_bytes": 3360,
+      "bytes_divided_by_3_estimate": 1120,
+      "note": "Estimativa de planejamento do texto das fontes; não é tokenização nem inclui instruções, pergunta ou metadados."
+    },
+    "new_armor_for_rituals": {
+      "characters": 2172,
+      "utf8_bytes": 2265,
+      "bytes_divided_by_3_estimate": 755,
+      "note": "Estimativa de planejamento do texto das fontes; não é tokenização nem inclui instruções, pergunta ou metadados."
+    },
+    "new_rest_recovery": {
+      "characters": 1464,
+      "utf8_bytes": 1510,
+      "bytes_divided_by_3_estimate": 504,
+      "note": "Estimativa de planejamento do texto das fontes; não é tokenização nem inclui instruções, pergunta ou metadados."
+    }
+  }
+}

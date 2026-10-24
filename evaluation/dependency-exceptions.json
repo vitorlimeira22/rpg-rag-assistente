@@ -1,0 +1,11 @@
+{
+  "reviewed_on": "2026-10-24",
+  "expires_on": "2026-11-24",
+  "scope": "Somente Chroma PersistentClient embutido, sem servidor HTTP Chroma, sem tenants multiusuário e sem repositórios de modelo recebidos do usuário. Não usar estas exceções ao expor Chroma como serviço.",
+  "exceptions": [
+    {"id": "PYSEC-2026-311", "package": "chromadb", "version": "1.5.9", "reason": "CVE-2026-45829: criação remota de coleção com trust_remote_code via endpoint do servidor Chroma; esse servidor não é iniciado pela aplicação.", "url": "https://github.com/advisories/GHSA-f4j7-r4q5-qw2c"},
+    {"id": "PYSEC-2026-3814", "package": "chromadb", "version": "1.5.9", "reason": "CVE-2026-45833: atualização remota de coleção; não há endpoint HTTP Chroma nem configuração remota de modelos.", "url": "https://github.com/advisories/GHSA-36p7-vc44-83pf"},
+    {"id": "PYSEC-2026-3815", "package": "chromadb", "version": "1.5.9", "reason": "CVE-2026-45831: autorização RBAC entre tenants no servidor; o projeto não oferece tenants nem autenticação Chroma.", "url": "https://github.com/advisories/GHSA-xph7-9rjv-w5fr"},
+    {"id": "PYSEC-2026-3813", "package": "chromadb", "version": "1.5.9", "reason": "CVE-2026-45830: autorização de coleções entre tenants no servidor; somente um armazenamento local embutido é usado.", "url": "https://github.com/advisories/GHSA-2wm9-hf6c-p5cr"}
+  ]
+}

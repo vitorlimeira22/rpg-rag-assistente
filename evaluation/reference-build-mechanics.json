@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "purpose": "Contexto de referência para isolar recuperação de geração; somente avaliação, nunca usado no aplicativo. Páginas completas, sem gabarito enviado ao modelo.",
+  "book": {
+    "title": "Ordem Paranormal RPG",
+    "edition": "1.1",
+    "sha256": "236b90b7232600e00487c5f14a04e7230ea3ecb46086e6b9a93b42dfbad856fd"
+  },
+  "cases": {
+    "dice-nonproficient-penalty": [
+      {
+        "pdf_page": 47,
+        "printed_page": "39",
+        "start": null,
+        "end": null,
+        "expected_chars": 1708,
+        "sha256": "7854a13ea9c9a8014a05878fbcce7a899eb0e12312db2cc5683aafc671c04662"
+      },
+      {
+        "pdf_page": 48,
+        "printed_page": "40",
+        "start": null,
+        "end": null,
+        "expected_chars": 3104,
+        "sha256": "f347dc92d1e35cf32f73fa67063a15cc7d087087f529aef890d4de855c6448da"
+      },
+      {
+        "pdf_page": 62,
+        "printed_page": "54",
+        "start": null,
+        "end": null,
+        "expected_chars": 3494,
+        "sha256": "a0d2939a7d0d15aef23c6153324c9d3c18107ef651168e063cb047733ecb1bf1"
+      }
+    ]
+  }
+}

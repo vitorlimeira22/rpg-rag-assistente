@@ -1,0 +1,7 @@
+[
+  {"question": "Como funciona um teste de pericia?", "expected_answer": "Role 1d20 e some a perícia; sucesso ao igualar ou superar a dificuldade.", "expected_pdf_pages": [1]},
+  {"question": "Qual o bonus de uma pericia treinada?", "expected_answer": "Uma perícia treinada concede +2; sem treinamento, o bônus é zero.", "expected_pdf_pages": [1]},
+  {"question": "Como recuperar pontos de energia?", "expected_answer": "Os pontos gastos retornam após um descanso completo de oito horas.", "expected_pdf_pages": [2]},
+  {"question": "Quanto custa uma habilidade simples?", "expected_answer": "Uma habilidade simples custa 1 ponto de energia.", "expected_pdf_pages": [2]},
+  {"question": "Quanto custa uma espada laser?", "expected_answer": "O livro fictício não define preço ou regra para esse item; informar a limitação.", "expected_pdf_pages": [2], "requires_abstention": true}
+]

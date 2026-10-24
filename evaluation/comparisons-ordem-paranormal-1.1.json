@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "title": "Avaliação de respostas comparativas — Ordem Paranormal RPG 1.1",
+  "created_on": "2026-10-20",
+  "book": {
+    "title": "Ordem Paranormal RPG",
+    "edition": "1.1",
+    "page_numbering": "pdf_page é a posição física no arquivo, começando em 1; printed_page é o rótulo conferido no banco."
+  },
+  "verification": {
+    "method": "Busca textual local e leitura integral das páginas relevantes no SQLite, sem chamadas à API de geração.",
+    "llm_api_calls": 0,
+    "reviewed_pdf_pages": [70, 101, 125, 127, 131, 137, 140, 141, 142, 320],
+    "note": "Os fatos abaixo são paráfrases curtas para revisão. O resultado da busca, isoladamente, não comprova a resposta."
+  },
+  "usage": {
+    "mode": "Revisão manual de respostas e respectivas fontes; este arquivo não é executado pelo run_eval.py atual.",
+    "calibration": "A pergunta sobre o ritual mais poderoso já orientou mudanças no projeto. Seu resultado deve ser reportado separadamente.",
+    "new_cases": "As duas perguntas adicionais ainda não foram submetidas à API na criação deste arquivo. São novos casos, não um conjunto cego ou estatisticamente representativo.",
+    "source_rule": "Uma referência precisa sustentar a afirmação associada. Presença da página entre os resultados não basta.",
+    "comparison_rule": "Distinguir fatos do livro, cálculos derivados e conclusão comparativa. Uma escolha contextual não deve ser apresentada como ranking oficial.",
+    "api_failures": "429, timeout, falta de chave e resposta interrompida são falhas operacionais; registrar como not_evaluated e não como resposta factual correta ou incorreta.",
+    "record_per_run": [
+      "data e versão do prompt",
+      "modelo e configuração",
+      "versão da coleção vetorial",
+      "pergunta exata",
+      "texto da resposta",
+      "fontes citadas e páginas",
+      "ferramentas utilizadas",
+      "tempo e tokens quando disponíveis",
+      "critérios atendidos e erros críticos",
+      "status operacional"
+    ]
+  },
+  "rubric": {
+    "scores": {
+      "0": "Não atende ou contradiz o critério.",
+      "1": "Atende parcialmente, com omissão relevante.",
+      "2": "Atende de maneira sustentada pelas fontes."
+    },
+    "dimensions": [
+      "Compara opções relevantes para a pergunta.",
+      "Mantém corretos valores, efeitos e condições.",
+      "Explicita custos, limitações e diferenças que afetam a decisão.",
+      "Usa citações que sustentam cada afirmação técnica.",
+      "Apresenta conclusão proporcional à evidência e ao contexto informado."
+    ],
+    "critical_error_policy": "Registrar separadamente qualquer erro crítico. Uma pontuação total alta não compensa inventar uma regra, remover uma condição decisiva ou citar uma fonte que não sustenta a afirmação.",
+    "execution_status": "not_run"
+  },
+  "cases": [
+    {
+      "id": "calibration_ritual_power",
+      "split": "calibration",
+      "question": "qual o ritual mais poderoso ?",
+      "intent": "Comparar poder de rituais por critérios explícitos, sem confundir um comentário geral sobre círculos com avaliação de opções concretas.",
+      "expected_response_outline": [
+        "Explicar que a escolha depende do critério, por exemplo dano imediato em área, efeito contra um alvo ou controle de espaço.",
+        "Comparar pelo menos dois rituais cujas descrições completas tenham sido consultadas.",
+        "Associar a cada opção efeitos e limitações decisivas, preservando diferenças entre versão básica, discente e verdadeira.",
+        "Dar uma conclusão contextual sustentada; pode perguntar sobre NEX e objetivo para adaptar a escolha.",
+        "Se as fontes forem insuficientes para comparar, declarar precisamente o que falta. Essa abstenção é adequada, mas não conta como tarefa comparativa concluída."
+      ],
+      "sources": [
+        {
+          "source_id": "ritual_circles",
+          "pdf_page": 125,
+          "printed_page": "117",
+          "section": "Rituais / Classificação / Círculos",
+          "supports": "Círculos indicam complexidade e poder geral; não elegem um ritual específico como campeão absoluto."
+        },
+        {
+          "source_id": "ritual_costs",
+          "pdf_page": 127,
+          "printed_page": "119",
+          "section": "Tabela 5.2 / Conjurando Rituais",
+          "supports": "Custo básico por círculo e regras de conjuração."
+        },
+        {
+          "source_id": "ritual_catalog",
+          "pdf_page": 131,
+          "printed_page": "123",
+          "section": "Lista de Rituais / 4º círculo",
+          "supports": "Localização de candidatos; os resumos não substituem suas descrições completas."
+        },
+        {
+          "source_id": "deflagracao",
+          "pdf_page": 137,
+          "printed_page": "129",
+          "section": "Descrição dos Rituais / Deflagração de Energia",
+          "supports": "Dano, área, resistência, efeitos em equipamentos e versão verdadeira."
+        },
+        {
+          "source_id": "fim_start",
+          "pdf_page": 140,
+          "printed_page": "132",
+          "section": "Descrição dos Rituais / Fim Inevitável",
+          "supports": "Execução, alcance, duração, atração e risco ao conjurador."
+        },
+        {
+          "source_id": "fim_continuation",
+          "pdf_page": 141,
+          "printed_page": "133",
+          "section": "Descrição dos Rituais / continuação de Fim Inevitável",
+          "supports": "Condição para dano e alterações das versões discente e verdadeira."
+        },
+        {
+          "source_id": "inexistir",
+          "pdf_page": 142,
+          "printed_page": "134",
+          "section": "Descrição dos Rituais / Inexistir",
+          "supports": "Dano, resistência, condição de apagamento e aprimoramentos."
+        }
+      ],
+      "critical_facts": [
+        {
+          "id": "criterion_not_official_ranking",
+          "applies_when": "Sempre.",
+          "expected": "Identificar a conclusão como comparação por critérios, sem atribuir ao livro um ranking absoluto não demonstrado.",
+          "source_ids": ["ritual_circles"]
+        },
+        {
+          "id": "fourth_circle_cost",
+          "applies_when": "Se informar custo de um ritual básico de 4º círculo.",
+          "expected": "O custo básico é 10 PE; aprimoramentos têm acréscimos próprios e não devem ser confundidos com esse custo.",
+          "source_ids": ["ritual_costs"]
+        },
+        {
+          "id": "deflagracao_damage_and_area",
+          "applies_when": "Se comparar Deflagração de Energia.",
+          "expected": "Na forma básica, causa 3d10 multiplicado por 10 de dano de Energia em uma explosão de raio 15 m; Fortitude bem-sucedida reduz o dano à metade. O conjurador não é afetado.",
+          "source_ids": ["deflagracao"]
+        },
+        {
+          "id": "deflagracao_selection",
+          "applies_when": "Se discutir segurança dos aliados ou seleção de alvos em Deflagração de Energia.",
+          "expected": "A forma básica não poupa aliados por escolha do conjurador. Escolher os alvos é efeito da versão verdadeira, com acréscimo de 5 PE.",
+          "source_ids": ["deflagracao"]
+        },
+        {
+          "id": "fim_condition_and_continuation",
+          "applies_when": "Se comparar Fim Inevitável.",
+          "expected": "A atração alcança seres até 90 m e pode afetar o próprio conjurador na forma básica. Os 100 pontos de dano de Morte por rodada dependem de iniciar o turno tocando o vácuo; não são dano imediato garantido em todos os seres dentro de 90 m.",
+          "source_ids": ["fim_start", "fim_continuation"],
+          "must_read_all_source_pages": true
+        },
+        {
+          "id": "inexistir_not_unconditional",
+          "applies_when": "Se comparar Inexistir.",
+          "expected": "A forma básica exige toque e causa 10d12+10 de Conhecimento. Vontade bem-sucedida muda o efeito para 2d12 e debilitado por uma rodada. O apagamento depende de os PV chegarem a zero ou menos; não é eliminação automática de qualquer alvo.",
+          "source_ids": ["inexistir"]
+        }
+      ],
+      "critical_failure_examples": [
+        "Usar apenas trilhas de ocultista, listas de nomes ou texto geral sobre círculos para justificar efeitos específicos.",
+        "Misturar dano ou seleção de alvos da versão verdadeira com custo e requisitos da básica.",
+        "Declarar dano máximo, médio ou repetido como resultado garantido sem explicitar cálculo e condições.",
+        "Omitir a continuação na página 141 e inventar o efeito final de Fim Inevitável.",
+        "Responder somente 'depende' sem comparação, apesar de ter obtido descrições suficientes."
+      ],
+      "alternative_options_policy": "Os três rituais acima são referências verificadas para revisão, não uma lista obrigatória. Outras opções podem ser aceitas se suas páginas forem conferidas e sustentarem a comparação.",
+      "last_run": {
+        "date": "2026-10-20",
+        "prompt_version": "2026-10-20-v11",
+        "model": "openai/gpt-oss-120b",
+        "reasoning_effort": "medium",
+        "operational_status": "research_limit",
+        "answer_quality": "not_evaluated",
+        "note": "Descobriu candidatos, mas não chegou à síntese. A última correção de timeout só foi verificada com teste simulado.",
+        "report": "results-research-2026-10-20.md"
+      }
+    },
+    {
+      "id": "new_armor_for_rituals",
+      "split": "new",
+      "question": "Tenho proficiência em proteção leve e pesada e pretendo conjurar rituais. Compare as duas sem modificações: Defesa, categoria, espaços, vantagens e impacto na conjuração. A pesada é sempre a melhor escolha?",
+      "intent": "Comparar equipamento por benefício e contrapartida, reunindo regras de duas seções diferentes.",
+      "assumptions": [
+        "Proteções sem modificações ou maldições.",
+        "Proficiência nas duas opções, conforme informado na pergunta.",
+        "Nenhuma habilidade especial altera a conjuração."
+      ],
+      "sources": [
+        {
+          "source_id": "armor",
+          "pdf_page": 70,
+          "printed_page": "62",
+          "section": "Proteções / Tabela 3.6",
+          "supports": "Defesa, categoria, espaços, resistências e penalidade de carga da pesada."
+        },
+        {
+          "source_id": "casting",
+          "pdf_page": 127,
+          "printed_page": "119",
+          "section": "Conjurando Rituais / Gestos e Componentes / Concentração",
+          "supports": "Diferença entre conjurar usando proteção leve e pesada."
+        }
+      ],
+      "critical_facts": [
+        {
+          "id": "light_values",
+          "expected": "Leve fornece Defesa +5, categoria I e ocupa 2 espaços.",
+          "source_ids": ["armor"]
+        },
+        {
+          "id": "heavy_values",
+          "expected": "Pesada fornece Defesa +10, categoria II e ocupa 5 espaços.",
+          "source_ids": ["armor"]
+        },
+        {
+          "id": "heavy_tradeoffs",
+          "expected": "A pesada oferece resistência 2 a balístico, corte, impacto e perfuração, mas impõe -5 às perícias sujeitas à penalidade de carga.",
+          "source_ids": ["armor"]
+        },
+        {
+          "id": "casting_test",
+          "expected": "Conjurar com leve é condição ruim: Vontade, DT 15 + custo em PE. Com pesada é condição terrível: DT 20 + custo em PE. Proficiência não elimina essa regra.",
+          "source_ids": ["casting"]
+        },
+        {
+          "id": "casting_failure",
+          "expected": "Falhar no teste de concentração impede o ritual e perde os PE.",
+          "source_ids": ["casting"]
+        }
+      ],
+      "expected_response_outline": [
+        "Apresentar os valores das duas opções e suas diferenças.",
+        "Combinar a proteção adicional com o maior custo de inventário/categoria e a maior dificuldade de conjuração.",
+        "Concluir de modo contextual; a maior Defesa, sozinha, não demonstra superioridade em todas as situações."
+      ],
+      "critical_failure_examples": [
+        "Afirmar que proficiência remove a dificuldade de conjurar com proteção.",
+        "Tratar o bônus de Defesa como resistência geral a dano.",
+        "Aplicar a resistência 2 da pesada a todos os tipos de dano.",
+        "Inventar que proteção pesada proíbe completamente conjurar rituais.",
+        "Misturar modificações ou maldições nas características básicas solicitadas."
+      ],
+      "minimum_evidence_groups": [
+        {"all_source_ids": ["armor"]},
+        {"all_source_ids": ["casting"]}
+      ],
+      "last_run": null
+    },
+    {
+      "id": "new_rest_recovery",
+      "split": "new",
+      "question": "Um agente de NEX 35%, sem bônus de comida ou habilidades, precisa recuperar mais de 21 PV e 21 PE. Quanto recupera ao dormir em condição precária, normal, confortável e luxuosa? Compare as opções e diga se pode dormir duas vezes no mesmo interlúdio.",
+      "intent": "Comparar quatro opções com cálculo simples, preservando arredondamento e restrição de frequência.",
+      "assumptions": [
+        "A perda de PV e PE é suficiente para não limitar os valores calculados pelo máximo da ficha.",
+        "Não há modificadores por alimentação, habilidades ou efeitos especiais.",
+        "A pergunta trata da ação dormir, não da ação relaxar."
+      ],
+      "sources": [
+        {
+          "source_id": "sleep",
+          "pdf_page": 101,
+          "printed_page": "93",
+          "section": "Interlúdio / Dormir",
+          "supports": "Exemplo explícito para NEX 35%, multiplicadores das condições e frequência."
+        },
+        {
+          "source_id": "rounding",
+          "pdf_page": 320,
+          "printed_page": "312",
+          "section": "Clarificações de Regras / Fazendo Cálculos / Arredondamentos",
+          "supports": "Divisões são arredondadas para baixo quando não há regra específica diferente."
+        }
+      ],
+      "expected_derived_values": {
+        "normal_recovery_base": 7,
+        "precaria": {"pv": 3, "pe": 3, "calculation": "floor(7 / 2)"},
+        "normal": {"pv": 7, "pe": 7, "calculation": "7"},
+        "confortavel": {"pv": 14, "pe": 14, "calculation": "7 * 2"},
+        "luxuosa": {"pv": 21, "pe": 21, "calculation": "7 * 3"}
+      },
+      "critical_facts": [
+        {
+          "id": "base_for_nex",
+          "expected": "O exemplo de NEX 35% usa recuperação normal de 7 PV e 7 PE.",
+          "source_ids": ["sleep"]
+        },
+        {
+          "id": "precarious_rounding",
+          "expected": "A condição precária reduz a recuperação pela metade; 7/2 resulta em 3 de cada recurso após arredondamento para baixo.",
+          "source_ids": ["sleep", "rounding"],
+          "must_read_all_source_pages": true
+        },
+        {
+          "id": "comfort_and_luxury",
+          "expected": "Confortável dobra a recuperação para 14 PV e 14 PE; luxuosa triplica para 21 PV e 21 PE.",
+          "source_ids": ["sleep"]
+        },
+        {
+          "id": "once_per_interlude",
+          "expected": "Só é permitido dormir uma vez por interlúdio.",
+          "source_ids": ["sleep"]
+        },
+        {
+          "id": "availability",
+          "expected": "A melhor recuperação numérica não garante disponibilidade: o acesso às condições depende do crédito e do local.",
+          "source_ids": ["sleep"]
+        }
+      ],
+      "expected_response_outline": [
+        "Mostrar os quatro pares de recuperação e identificar os cálculos derivados.",
+        "Explicar o arredondamento da condição precária com fonte própria.",
+        "Responder à limitação de uma ação dormir por interlúdio.",
+        "Distinguir maior recuperação numérica de disponibilidade prática da acomodação."
+      ],
+      "critical_failure_examples": [
+        "Recuperar 3,5 ou 4 PV/PE na condição precária.",
+        "Tratar 21 como recuperação apenas de PV, deixando PE sem o mesmo multiplicador.",
+        "Dizer que é possível repetir dormir indefinidamente no mesmo interlúdio.",
+        "Somar bônus de alimentação ou habilidades não fornecidos na pergunta.",
+        "Usar regras de relaxar e recuperar Sanidade como se fossem a ação dormir."
+      ],
+      "minimum_evidence_groups": [
+        {"all_source_ids": ["sleep"]},
+        {"all_source_ids": ["rounding"]}
+      ],
+      "last_run": null
+    }
+  ]
+}

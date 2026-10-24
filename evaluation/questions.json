@@ -1,0 +1,39 @@
+[
+  {
+    "question": "O que é NEX?",
+    "expected_answer": "É a medida da exposição paranormal do personagem. O livro descreve o início em 5% e a progressão ligada às missões.",
+    "expected_pdf_pages": [31],
+    "expected_printed_pages": ["23"]
+  },
+  {
+    "question": "Como funciona um teste de perícia?",
+    "expected_answer": "A rolagem usa o atributo associado e soma o bônus da perícia ao resultado aplicável; o grau de treinamento influencia esse bônus.",
+    "expected_pdf_pages": [47, 48],
+    "expected_printed_pages": ["39", "40"]
+  },
+  {
+    "question": "Qual recurso gasto para usar habilidades especiais?",
+    "expected_answer": "O trecho de progressão explica que habilidades podem gastar PE e estabelece um limite de PE por turno.",
+    "expected_pdf_pages": [31],
+    "expected_printed_pages": ["23"]
+  },
+  {
+    "question": "Quanto custa uma espada laser?",
+    "requires_abstention": true,
+    "expected_answer": "O livro consultado não oferece base suficiente para responder.",
+    "expected_pdf_pages": [],
+    "expected_printed_pages": []
+  },
+  {
+    "question": "quais sao as reliquias da calamidade",
+    "expected_answer": "A página 96 menciona Relíquias como origens primordiais de Medo. A menção não basta para enumerar as Relíquias da série; explicitar a limitação.",
+    "expected_pdf_pages": [104],
+    "expected_printed_pages": ["96"]
+  },
+  {
+    "question": "Quais são as classes disponíveis?",
+    "expected_answer": "Combatente, especialista e ocultista.",
+    "expected_pdf_pages": [30],
+    "expected_printed_pages": ["22"]
+  }
+]

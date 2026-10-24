@@ -1,0 +1,14 @@
+{
+  "name": "Demonstração — Lia",
+  "character_class": "especialista",
+  "nex": 5,
+  "attributes": {
+    "agilidade": 2,
+    "forca": 1,
+    "intelecto": 3,
+    "presenca": 2,
+    "vigor": 1
+  },
+  "origin": "",
+  "notes": "Personagem fictícia para demonstrar a ficha básica. Origem, perícias e equipamento ainda precisam ser escolhidos e conferidos."
+}

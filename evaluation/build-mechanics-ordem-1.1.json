@@ -1,0 +1,74 @@
+[
+  {
+    "id": "dice-pool-training-zero",
+    "question": "Tenho Força 3 e sou treinado em Atletismo. Tirei 4, 12 e 17 nos dados contra DT 20. Qual é meu resultado e eu passo? Se minha Força fosse 0, quantos dados eu rolaria e qual resultado escolheria?",
+    "expected_answer": "Força 3 permite rolar 3d20, escolher 17 e somar +5 de treinamento: resultado 22, sucesso contra DT 20. Com Força 0, rola 2d20 e escolhe o menor, ainda somando +5 pelo treinamento. Não somar os três dados nem somar o atributo ao resultado.",
+    "expected_pdf_pages": [22, 47, 48, 83],
+    "expected_printed_pages": ["14", "39", "40", "75"],
+    "source_sections": ["Atributos", "Usando perícias", "Bônus de perícia", "Testes & habilidades"],
+    "review_notes": "Páginas alternativas podem sustentar a mesma regra; não é necessário citar todas. O teste de atributo 0 não tem valores de dados especificados, então não há um resultado numérico determinado para ele."
+  },
+  {
+    "id": "dice-nonproficient-penalty",
+    "question": "Tenho Agilidade 3, sou treinado em Pontaria, mas não tenho proficiência com armas táticas. Ao atacar com um fuzil de assalto, quantos d20 eu rolo, sem outros modificadores? A penalidade diminui os dados ou o resultado?",
+    "expected_answer": "O fuzil de assalto é uma arma tática. Sem proficiência, sofre menos 2d20 nos testes de ataque. Partindo de Agilidade 3, rola apenas 1d20 e soma +5 de Pontaria treinada. A penalidade retira dois dados da quantidade rolada; não subtrai 2 do resultado nem o valor de uma rolagem de 2d20.",
+    "expected_pdf_pages": [47, 48, 62, 65],
+    "expected_printed_pages": ["39", "40", "54", "57"],
+    "source_sections": ["Usando perícias", "Bônus de perícia", "Armas: proficiência", "Tabela 3.3: armas"],
+    "review_notes": "O texto original usa dois ícones de d20 consecutivos para a penalidade. O cabeçalho de armas táticas começa na página anterior da tabela; a descrição na página 54 já identifica fuzis como táticos. A pergunta pressupõe acesso à arma, sem avaliar patente ou inventário."
+  },
+  {
+    "id": "build-combatant-nex5-base",
+    "question": "Quero criar um combatente NEX 5% com Força 3, Agilidade 2, Vigor 2, Presença 1 e Intelecto 1. Essa distribuição inicial é válida? Quais são meus PV, PE e Sanidade iniciais, sem modificadores de origem, poderes ou equipamentos?",
+    "expected_answer": "A distribuição é válida: todos começam em 1 e foram distribuídos quatro pontos, sem ultrapassar o máximo inicial 3. O combatente tem 20 + Vigor = 22 PV, 2 + Presença = 3 PE e 12 SAN. Não aplicar o ganho de um novo nível ao NEX inicial de 5%.",
+    "expected_pdf_pages": [21, 22, 33],
+    "expected_printed_pages": ["13", "14", "25"],
+    "source_sections": ["Passo a passo para criar seu agente", "Geração de atributos", "Combatente: características"],
+    "review_notes": "É uma conferência da distribuição e dos valores base, não uma validação de ficha completa. A tabela visual de características foi conferida no PDF."
+  },
+  {
+    "id": "build-occultist-nex5-rituals",
+    "question": "Meu ocultista NEX 5% tem Intelecto 3, Presença 3, Vigor 1, Agilidade 1 e Força 1. Sem modificadores de origem, poderes ou equipamentos, quais são seus PV, PE e Sanidade iniciais? Quantos rituais recebe pela classe e de qual círculo? Já pode escolher um ritual de 2º círculo?",
+    "expected_answer": "Tem 12 + Vigor = 13 PV, 4 + Presença = 7 PE e 20 SAN. Escolhido pelo Outro Lado concede três rituais de 1º círculo no início; não recebe acesso ao 2º círculo no NEX 5%. Pela progressão normal da classe, o 2º círculo é liberado em NEX 25%. Os rituais concedidos por essa habilidade não contam no limite de rituais conhecidos.",
+    "expected_pdf_pages": [40, 41],
+    "expected_printed_pages": ["32", "33"],
+    "source_sections": ["Ocultista: Escolhido pelo Outro Lado", "Ocultista: características", "Tabela 1.5: o ocultista"],
+    "review_notes": "A pergunta trata dos benefícios normais da classe e exclui modificadores. A regra de rituais começa e continua na própria página 32; a ordem de extração pode intercalar a descrição narrativa."
+  },
+  {
+    "id": "dice-critical-acha-gadanho",
+    "question": "Tenho Força 3 e nenhuma habilidade ou modificação de dano. Qual é o dano normal e o dano de um acerto crítico de uma acha e de um gadanho? Escreva as fórmulas com d12 e d4 e explique se a Força também é multiplicada.",
+    "expected_answer": "Acha: dano normal 1d12 + 3; multiplicador x3, crítico 3d12 + 3. Gadanho: dano normal 2d4 + 3; multiplicador x4, crítico 8d4 + 3. Força é somada ao dano corpo a corpo, mas bônus numéricos não são multiplicados no crítico. Dados extras de outras habilidades também não são multiplicados pela regra geral, embora não existam nesse exemplo.",
+    "expected_pdf_pages": [62, 65],
+    "expected_printed_pages": ["54", "57"],
+    "source_sections": ["Armas: corpo a corpo", "Características das armas: crítico", "Tabela 3.3: armas"],
+    "review_notes": "Tabela de armas e regra de crítico conferidas visualmente. As fórmulas são deduções aritméticas das regras, anteriores a resistência, vulnerabilidade ou outras defesas do alvo."
+  },
+  {
+    "id": "build-combatant-power-prerequisites",
+    "question": "Na progressão normal de um combatente, posso começar no NEX 5% com Golpe Pesado e Proteção Pesada como poderes da classe? Quando posso escolher esses poderes e qual requisito específico tem Proteção Pesada? Não considere poderes concedidos por outras fontes.",
+    "expected_answer": "Não. No NEX 5%, o benefício de classe é Ataque Especial, e o primeiro poder de combatente à escolha chega em NEX 15%. Golpe Pesado não lista pré-requisito próprio e pode ser escolhido nessa oportunidade. Proteção Pesada exige NEX 30% e pode ser escolhida a partir de uma oportunidade de poder nesse NEX. A progressão concede novos poderes no NEX 30% e a cada 15% subsequentes.",
+    "expected_pdf_pages": [32, 33],
+    "expected_printed_pages": ["24", "25"],
+    "source_sections": ["Habilidades de combatente", "Poderes de combatente", "Tabela 1.3: o combatente"],
+    "review_notes": "Não confundir proficiência inicial em proteções leves com o poder Proteção Pesada. Não atribuir ao personagem todos os poderes listados na classe."
+  },
+  {
+    "id": "build-sniper-nex35-open",
+    "question": "Sugira uma build para sniper NEX 35.",
+    "expected_answer": "Não há uma única build correta. Uma proposta válida deve escolher classe e trilha compatíveis, respeitar a progressão até NEX 35%, explicitar suposições sobre origem, atributos e patente, e separar recomendações táticas de regras oficiais. Especialista/Atirador de Elite é uma opção: Mira de Elite fornece proficiência com armas de fogo de balas longas e Intelecto no dano, mas ainda não concede Disparo Letal (NEX 40%). Combatente/Aniquilador também é uma opção válida, com Ataque Especial e A Favorita, sem ganhar automaticamente habilidades de especialista. Atirador de Elite não recebe Ataque Furtivo de Infiltrador nem Ataque Especial de combatente por selecionar sua trilha. Versatilidade só chega em NEX 50% e permite um primeiro poder de outra trilha da mesma classe. O equipamento deve respeitar categoria, patente e efeitos de modificações/reduções demonstrados nas fontes.",
+    "expected_pdf_pages": [22, 30, 31, 32, 33, 34, 36, 37, 38, 48, 59, 60, 62, 65, 66, 68],
+    "expected_printed_pages": ["14", "22", "23", "24", "25", "26", "28", "29", "30", "40", "51", "52", "54", "57", "58", "60"],
+    "source_sections": ["Geração de atributos", "Habilidades de classe e trilhas", "Progressão de personagem", "Combatente e Aniquilador", "Especialista e Atirador de Elite", "Infiltrador", "Versatilidade", "Bônus de perícia", "Patente", "Tabela 3.1: patentes", "Tabela 3.3: armas", "Fuzil de precisão", "Modificações para armas"],
+    "acceptance_criteria": [
+      "Apresentar pelo menos uma proposta coerente, identificada como sugestão. Pode escolher Especialista/Atirador de Elite, Combatente/Aniquilador ou outro caminho demonstravelmente permitido; não exigir uma build única nem alegar otimização universal.",
+      "Escolhas não fornecidas pelo usuário, como origem, patente, atributos, itens e foco tático, devem ser hipóteses explícitas da proposta ou dados solicitados para completá-la. NEX não determina automaticamente a patente.",
+      "Na progressão normal, até NEX 35% há uma escolha de trilha no 10%, dois poderes de classe escolhidos nos NEX 15% e 30%, um aumento de atributo no 20% e aumento de grau de treinamento no 35%. Não antecipar habilidades de NEX 40%/50%/65%/99%.",
+      "Se usar Atirador de Elite: Mira de Elite aplica Intelecto ao dano de armas de fogo de balas longas, não ao teste de Pontaria. Perito e Conhecimento Aplicado explicitamente excluem Luta e Pontaria. Escolher Pontaria para o aumento do grau no NEX 35% permite bônus veterano +10, sem conceder automaticamente esse grau a todas as perícias.",
+      "Não combinar gratuitamente Mira de Elite, Ataque Furtivo e Ataque Especial. Ataque Furtivo pertence à trilha Infiltrador; Ataque Especial à classe combatente. Versatilidade é de NEX 50% e restrita às opções da mesma classe. Exceções propostas precisam de fonte, requisitos e custos, sem tratar poderes de classe e habilidades de trilha como equivalentes.",
+      "Se recomendar fuzil de precisão, usar os valores base corretos: categoria III, dano 2d10, crítico 19/x3, alcance longo e balas longas. O benefício de +5 na margem de ameaça da descrição da arma exige ser veterano em Pontaria e mirar. Cada modificação normalmente aumenta a categoria em I; observar eventuais reduções específicas e a capacidade da patente, sem assumir acesso livre.",
+      "Se calcular atributos, PV, PE, SAN, dano ou crítico, mostrar premissas e aplicar progressão/modificadores corretamente. Não somar Agilidade ao dano de armas de fogo sem habilidade pertinente nem multiplicar bônus numéricos pelo crítico. Se não houver informação suficiente para algum total, delimitá-lo em vez de inventá-lo."
+    ],
+    "review_notes": "Caso aberto para revelar combinações ilegais e recomendações sem sustentação, além de recuperação lexical. As páginas listadas são referências possíveis para alternativas diferentes, não uma exigência de recuperar ou citar todas. As tabelas de especialista/patentes e a página de Atirador de Elite/Infiltrador foram conferidas visualmente. Uma avaliação positiva exige ler a proposta concreta e suas fontes; apenas encontrar termos, classes e páginas não prova validade da build."
+  }
+]
