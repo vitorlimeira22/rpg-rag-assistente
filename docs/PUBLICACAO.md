@@ -30,7 +30,9 @@ Validação feita em uma cópia contendo somente os arquivos preparados no Git, 
 | Dados pessoais | Conteúdo do `.env` preservado, confirmado por hash antes/depois |
 | Consumo de IA nesta revisão | Nenhuma chamada real ao Groq |
 
-A CI foi preparada, mas ainda não executada no GitHub. Não houve commit, associação a remoto ou push. Os testes comprovam os cenários executados, não uma garantia geral de segurança ou de precisão da IA. A pasta `data/publication/` contém a cópia isolada e um ZIP de conferência, ambos ignorados pelo Git.
+Após essa revisão, a publicação foi autorizada pelo proprietário e concluída em [vitorlimeira22/rpg-rag-assistente](https://github.com/vitorlimeira22/rpg-rag-assistente). A [primeira CI no GitHub](https://github.com/vitorlimeira22/rpg-rag-assistente/actions/runs/40143879346) passou em Linux/Python 3.12, incluindo testes, demonstração, scanner de publicação e auditoria de dependências. Secret scanning, push protection, alertas de dependências e relatos privados de vulnerabilidade foram habilitados. Os commits usam o e-mail `noreply` do GitHub.
+
+Os testes comprovam os cenários executados, não uma garantia geral de segurança ou de precisão da IA. A pasta `data/publication/` contém a cópia isolada e um ZIP da preparação, ambos ignorados pelo Git.
 
 ## Verificação antes do primeiro envio
 
@@ -92,4 +94,4 @@ Informe o recorte: um sistema/edição, regras de ficha parcialmente conferidas 
 
 Use o PDF autoral e dados fictícios em vídeos, prints e demonstrações. As imagens históricas já incluídas ilustram a identidade visual anterior ao chat, sem demonstrar a interface mais recente. Não capture o `.env`, caminhos pessoais, console com credenciais, páginas do livro ou conversas reais de jogadores.
 
-O código e os materiais autorais foram preparados sob AGPL-3.0-only considerando a dependência PyMuPDF. Leia [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) antes de publicar ou alterar a licença. O envio ao GitHub e o post no LinkedIn permanecem a cargo do proprietário.
+O código e os materiais autorais foram preparados sob AGPL-3.0-only considerando a dependência PyMuPDF. Leia [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) antes de alterar a licença. O primeiro envio ao GitHub foi realizado com autorização do proprietário; o post no LinkedIn permanece a cargo dele.

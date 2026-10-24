@@ -1,5 +1,7 @@
 # Assistente de Ordem Paranormal · Livro, missões e fichas
 
+[![Testes e publicação segura](https://github.com/vitorlimeira22/rpg-rag-assistente/actions/workflows/ci.yml/badge.svg)](https://github.com/vitorlimeira22/rpg-rag-assistente/actions/workflows/ci.yml)
+
 Projeto de portfólio em Python para estudar extração de PDF, recuperação de informação, RAG, FastAPI e testes. O sistema escolhido para uso privado é **Ordem Paranormal RPG, edição 1.1**. O repositório inclui um pequeno livro fictício, criado para demonstração pública.
 
 Projeto independente de estudo, sem afiliação oficial. **O livro, o formulário PDF, as chaves e os dados pessoais não acompanham o código.** A geração usa uma chave Groq fornecida por cada usuário; busca textual e conferência de páginas funcionam sem ela. O programa é local e não é um serviço público hospedado.
@@ -91,11 +93,13 @@ Para um livro e um usuário, SQLite + Chroma evitam configurar um servidor. **Po
 
 ## Instalação reproduzível (recomendada)
 
-Use Python **3.12** para reproduzir a revisão de publicação. O projeto declara suporte a Python 3.11+, mas essa revisão local foi executada em Windows com Python 3.12. A CI está configurada para Linux/Python 3.12; sua primeira execução no GitHub deve ser conferida após o envio.
+Use Python **3.12** para reproduzir a revisão de publicação. O projeto declara suporte a Python 3.11+, mas essa revisão local foi executada em Windows com Python 3.12. A CI também passou em Linux/Python 3.12 na [primeira execução no GitHub](https://github.com/vitorlimeira22/rpg-rag-assistente/actions/runs/40143879346).
 
-Dentro de um clone novo, no PowerShell:
+Para obter uma cópia nova, no PowerShell:
 
 ```powershell
+git clone https://github.com/vitorlimeira22/rpg-rag-assistente.git
+cd rpg-rag-assistente
 python -m pip install uv==0.13.5
 uv sync --locked --extra test
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
